@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#F5F1E8"/>
+  <rect x="72" y="72" width="1056" height="486" rx="24" fill="#FBF8F2" stroke="#D8D0C3"/>
+  <text x="120" y="220" fill="#1F1B17" font-family="Inter Tight, Arial, sans-serif" font-size="60" font-weight="700">
+    Personal Portfolio
+  </text>
+  <text x="120" y="298" fill="#6B645B" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="400">
+    Software engineering, machine learning, and AI
+  </text>
+  <line x1="120" y1="360" x2="1080" y2="360" stroke="#D8D0C3"/>
+  <text x="120" y="432" fill="#4A4238" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="500">
+    Replace this file with a custom OG image before deployment if desired.
+  </text>
+</svg>
