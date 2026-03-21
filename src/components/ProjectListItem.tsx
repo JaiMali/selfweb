@@ -9,18 +9,9 @@ export function ProjectListItem({ project }: ProjectListItemProps) {
 
   return (
     <article className="project-item" aria-labelledby={`project-${title}`}>
-      <header className="project-item__header">
-        <h3 id={`project-${title}`} className="project-item__title">
-          <a
-            className="text-link text-link--title"
-            href={githubUrl}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {title}
-          </a>
-        </h3>
-      </header>
+      <h3 id={`project-${title}`} className="project-item__title">
+        {title}
+      </h3>
 
       <p className="project-item__description">{description}</p>
 
