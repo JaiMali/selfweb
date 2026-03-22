@@ -14,7 +14,6 @@ export function Intro({ content }: IntroProps) {
     linkedinUrl,
     resumeUrl,
     location,
-    availability,
     profileImageSrc,
     profileImageAlt,
   } = content;
@@ -26,8 +25,6 @@ export function Intro({ content }: IntroProps) {
     resumeUrl ? { label: "Resume", href: resumeUrl } : null,
   ].filter(Boolean) as { label: string; href: string }[];
 
-  const meta = [location, availability].filter(Boolean);
-
   return (
     <section className="section intro" aria-labelledby="intro-title">
       <div className="intro__grid">
@@ -38,9 +35,7 @@ export function Intro({ content }: IntroProps) {
 
           <p className="intro__headline">{headline}</p>
 
-          <div className="intro__body">
-            <p>{summary}</p>
-          </div>
+          <p className="intro__summary">{summary}</p>
 
           {links.length > 0 ? (
             <ul className="link-row" aria-label="Profile links">
@@ -60,7 +55,7 @@ export function Intro({ content }: IntroProps) {
             </ul>
           ) : null}
 
-          {meta.length > 0 ? <p className="meta-line">{meta.join(" · ")}</p> : null}
+          {location ? <p className="meta-line">{location}</p> : null}
         </div>
 
         {profileImageSrc ? (

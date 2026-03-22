@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { applySeo } from "./lib/applySeo";
 import { siteContent } from "./content/siteContent";
 import { Intro } from "./components/Intro";
-import { About } from "./components/About";
 import { Projects } from "./components/Projects";
 
 export default function App() {
@@ -19,7 +18,6 @@ export default function App() {
       <main id="main-content" className="page">
         <div className="container container--page">
           <Intro content={siteContent} />
-          <About content={siteContent} />
           <Projects content={siteContent} />
         </div>
       </main>

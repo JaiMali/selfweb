@@ -13,7 +13,7 @@ export function Projects({ content }: ProjectsProps) {
   }
 
   return (
-    <section id="projects" className="section" aria-labelledby="projects-title">
+    <section id="projects" className="section projects" aria-labelledby="projects-title">
       <h2 id="projects-title" className="sr-only">
         Projects
       </h2>

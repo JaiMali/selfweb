@@ -173,13 +173,10 @@ code {
   font-weight: 400;
 }
 
-.intro__body {
-  margin-top: var(--space-4);
-}
-
-.intro__body p {
-  margin: 0;
+.intro__summary {
+  margin: var(--space-4) 0 0;
   color: var(--color-text-secondary);
+  max-width: 40rem;
 }
 
 .link-row {
@@ -215,41 +212,28 @@ code {
   max-width: var(--reading-max);
 }
 
-.prose {
-  display: grid;
-  gap: var(--space-3);
-}
-
-.prose p {
-  margin: 0;
-  color: var(--color-text-secondary);
-}
-
-.plain-list {
-  display: grid;
-  gap: var(--space-1);
-  margin: 0;
-  padding-left: var(--space-3);
-  color: var(--color-text-secondary);
-}
-
 .project-list {
   display: grid;
 }
 
 .project-item {
-  display: grid;
-  gap: var(--space-2);
   padding-block: var(--space-4);
   border-top: 1px solid var(--color-border);
 }
 
 .project-item:first-child {
   padding-top: 0;
+  border-top: 0;
 }
 
-.project-item__header {
-  display: block;
+.project-item__grid {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.project-item__content {
+  display: grid;
+  gap: var(--space-2);
 }
 
 .project-item__title {
@@ -278,26 +262,14 @@ code {
   color: var(--color-text-muted);
 }
 
-.contact-list {
-  display: grid;
-  gap: var(--space-3);
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.project-item__image-wrap {
+  max-width: 240px;
 }
 
-.contact-list li {
-  display: grid;
-  gap: var(--space-1);
-}
-
-.contact-list__label {
-  color: var(--color-text-muted);
-  font-size: var(--text-label-size);
-  line-height: var(--text-label-line);
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+.project-item__image {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-border);
 }
 
 .text-link {
@@ -314,6 +286,11 @@ code {
 
 .text-link--title {
   color: var(--color-text);
+  text-decoration: none;
+}
+
+.text-link--title:hover {
+  text-decoration: underline;
 }
 
 @media (min-width: 768px) {
@@ -334,8 +311,13 @@ code {
   .intro__image-wrap {
     justify-self: end;
   }
-}
 
+  .project-item__grid--with-image {
+    grid-template-columns: minmax(0, 1fr) 240px;
+    gap: var(--space-5);
+    align-items: start;
+  }
+}
 
 @media (max-width: 767px) {
   :root {
@@ -354,5 +336,8 @@ code {
   .intro__image-wrap {
     max-width: 176px;
   }
-}
 
+  .project-item__image-wrap {
+    max-width: 200px;
+  }
+}

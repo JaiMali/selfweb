@@ -5,8 +5,8 @@ export interface Project {
   tech: string[];
   githubUrl: string;
   demoUrl?: string;
-  role?: string;
-  impact?: string;
+  imageSrc?: string;
+  imageAlt?: string;
 }
 
 export interface SeoConfig {
@@ -21,17 +21,13 @@ export interface SiteContent {
   name: string;
   headline: string;
   summary: string;
-  about: string;
-  strengths: string[];
   location?: string;
-  availability?: string;
   email?: string;
   githubUrl?: string;
   linkedinUrl?: string;
   resumeUrl?: string;
   profileImageSrc?: string;
   profileImageAlt?: string;
-  closingLine?: string;
   seo: SeoConfig;
   projects: Project[];
 }
@@ -40,53 +36,34 @@ export const siteContent: SiteContent = {
   name: "Jai Mali",
   headline: "Hi, I'm Jai! I am currently at UC San Diego Health, and am passionate about AI and HealthTech.",
   summary:
-    "I build software that is technically sound, easy to use, and maintainable over time. My interests are in backend and full-stack engineering, ML-enabled products, and the practical systems work needed to make AI features dependable in production.",
-  about:
-    "I am most interested in engineering roles where strong fundamentals matter as much as model quality. That includes product-minded backend work, full-stack systems, data and inference pipelines, and user-facing tools that help people work more effectively with complex technical systems.\n\nI care about clear problem framing, thoughtful implementation, and interfaces that communicate competence without unnecessary complexity.",
-  strengths: [
-    "Full-stack engineering",
-    "Applied machine learning",
-    "LLM tooling",
-    "Data pipelines",
-    "Product-focused frontend quality",
-  ],
-  location: "San Diego, CA",
-  availability: "",
+    "I am currently an informaticist at UC San Diego Health's Cardiology Department, building and maintaining software to improve cross-functional workflows with python and SQL, and now beginning to incorporate AI/ML to improve physician reporting and managerial metrics.",
+  location: "",
   email: "realjaimali@gmail.com",
   githubUrl: "https://github.com/JaiMali",
-  linkedinUrl: "https://www.linkedin.com/in/jaimali/",
+  linkedinUrl: "https://linkedin.com/in/jaimali",
   resumeUrl: "",
   profileImageSrc: "/profile.jpg",
-  profileImageAlt: "Portrait of Jai",
-  closingLine:
-    "Contact me at any time",
+  profileImageAlt: "Jai's portrait",
   seo: {
-    title: "Jai Mali — Software Engineer",
+    title: "Jai",
     description:
-      "Jai's Website.",
+      "Jai's website.",
     ogImage: "/og-image.svg",
     siteUrl: "",
     favicon: "/favicon.svg",
   },
-  projects: [],
+  projects: [
+    {
+      title: "Project One",
+      description:
+        "A short sentence describing what the project does and why it is useful.",
+      details:
+        "One additional sentence on the system, workflow, or technical problem it addresses.",
+      tech: ["TypeScript", "React", "Python"],
+      githubUrl: "https://github.com/yourhandle/project-one",
+      demoUrl: "",
+      imageSrc: "",
+      imageAlt: "",
+    },
+  ],
 };
-
-/**
- * Example:
- *
- * profileImageSrc: "/profile.jpg",
- * profileImageAlt: "Portrait of Your Name",
- *
- * projects: [
- *   {
- *     title: "Retrieval-Augmented Research Assistant",
- *     description: "A tool for querying technical documents with grounded answers and source citations.",
- *     details: "Built a retrieval pipeline, chunking strategy, and evaluation loop to improve response quality on domain-specific material.",
- *     tech: ["TypeScript", "React", "Python", "FastAPI", "PostgreSQL"],
- *     githubUrl: "https://github.com/yourhandle/project-name",
- *     demoUrl: "",
- *     role: "Solo",
- *     impact: "Improved answer quality and reduced manual lookup time during research workflows."
- *   }
- * ]
- */
