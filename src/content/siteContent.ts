@@ -36,7 +36,7 @@ export const siteContent: SiteContent = {
   name: "Jai Mali",
   headline: "Hi, I'm Jai! I am currently at UC San Diego Health, and am passionate about AI and HealthTech.",
   summary:
-    "I am currently an informaticist at UC San Diego Health's Cardiology Department, building and maintaining software to improve cross-functional workflows with python and SQL, and now beginning to incorporate AI/ML to improve physician reporting and managerial metrics.",
+    "I am currently an informaticist at UC San Diego Health's Cardiology Department, building and maintaining software to improve cross-functional workflows with python and SQL, and now beginning to incorporate AI/ML to automate physician reporting and managerial metrics.",
   location: "",
   email: "realjaimali@gmail.com",
   githubUrl: "https://github.com/JaiMali",
